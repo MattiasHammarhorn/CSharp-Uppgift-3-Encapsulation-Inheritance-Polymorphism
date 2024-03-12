@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Encapsulation_Inheritance_Polymorphism.Program;
-
-namespace Encapsulation_Inheritance_Polymorphism
+﻿namespace Inheritance.Classes
 {
     internal class Wolfman : Wolf, IPerson
     {

@@ -1,4 +1,4 @@
-﻿namespace Encapsulation_Inheritance_Polymorphism.ErrorClasses
+﻿namespace Polymorphism.ErrorClasses
 {
     internal class NumericInputError : UserError
     {

@@ -1,4 +1,4 @@
-﻿using Encapsulation_Inheritance_Polymorphism.ErrorClasses;
+﻿using Polymorphism.ErrorClasses;
 
 namespace Polymorphism
 {
