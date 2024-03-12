@@ -8,22 +8,22 @@ namespace Encapsulation_Inheritance_Polymorphism
     {
         static void Main(string[] args)
         {
-            #region 3.1) Encapsulation
             PersonHandler personHandler = new PersonHandler();
 
             // Create an instance of Person and catch eventual exceptions in a try-catch block
-            Person testPerson = new Person();
+            /*Person testPerson = new Person();
             try
             {
                 // A Person's public properties are reachable throughout the project
                 testPerson.Age = 18;
+                Console.WriteLine($"testPerson.Age set manually: {testPerson.Age}");
                 testPerson.FName = "Test";
                 testPerson.LName = "Testingsson";
                 testPerson.Height = 169;
                 testPerson.Weight = 73;
-                // Använd den inskickade personens Age property för att sätta personens age-attribut
-                // via SetAge-metoden.
+                
                 personHandler.SetAge(testPerson, 19);
+                Console.WriteLine($"testPerson.Age after SetAge(): {testPerson.Age}");
 
                 personHandler.DisplayPersonalInformation(testPerson);
             }
@@ -31,9 +31,7 @@ namespace Encapsulation_Inheritance_Polymorphism
             {
                 // A Person's property defines an ArgumentException Message in the set accessor
                 Console.WriteLine(ex.Message);
-            }
-
-            // Set properties on the Person class using the methods in the PersonHandler class
+            }*/
 
             //Instantiate persons through the PersonHandler class
             Person p1 = personHandler.CreatePerson(34, "Karl", "Gustaf", 180, 82);
@@ -46,11 +44,14 @@ namespace Encapsulation_Inheritance_Polymorphism
             personHandler.persons.Add(p3);
             personHandler.persons.Add(p4);
 
-            // Test methods
+            Console.WriteLine();
+
+            // Test methods on objects created through the PersonHandler class
             for (int i = 0; i < personHandler.persons.Count(); i++)
             {
                 int y = i + 1;
                 Person person = personHandler.persons[i];
+                personHandler.DisplayPersonalInformation(person);
                 personHandler.SetAge(person, y);
                 personHandler.SetFName(person, $"Test-{y}");
                 personHandler.SetLName(person, $"Testingsson-{y}");
@@ -58,7 +59,6 @@ namespace Encapsulation_Inheritance_Polymorphism
                 personHandler.SetWeight(person, 70 + y);
                 personHandler.DisplayPersonalInformation(person);
             }
-            #endregion
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Polymorphism.ErrorClasses
 {
-    internal class TextInputError : UserError
+    public class TextInputError : UserError
     {
         public override string UEMessage()
         {

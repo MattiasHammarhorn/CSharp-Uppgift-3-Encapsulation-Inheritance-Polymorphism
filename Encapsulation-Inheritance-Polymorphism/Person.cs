@@ -11,9 +11,11 @@ namespace Encapsulation_Inheritance_Polymorphism
         private int age;
         private string fName;
         private string lName;
-        private int height;
-        private int weight;
+        private double height;
+        private double weight;
 
+        // Implemented validation in each property which throws an Argument Exception which
+        // includes a descriptive error message.
         public int Age
         {
             get { return age; }
@@ -59,7 +61,7 @@ namespace Encapsulation_Inheritance_Polymorphism
                 }
             }
         }
-        public int Height
+        public double Height
         {
             get{ return height; }
             set
@@ -74,7 +76,7 @@ namespace Encapsulation_Inheritance_Polymorphism
                 }
             }
         }
-        public int Weight
+        public double Weight
         {
             get { return weight; }
             set

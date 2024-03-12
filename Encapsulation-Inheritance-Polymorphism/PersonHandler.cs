@@ -11,6 +11,8 @@ namespace Encapsulation_Inheritance_Polymorphism
     {
         public List<Person> persons = new List<Person>();
 
+        // Methods for changing private fields on Person instances by
+        // updating the value of their properties
         public void SetAge(Person pers, int age)
         {
             pers.Age = age;
@@ -25,11 +27,11 @@ namespace Encapsulation_Inheritance_Polymorphism
         {
             pers.LName = lName;
         }
-        public void SetHeight(Person pers, int height)
+        public void SetHeight(Person pers, double height)
         {
             pers.Height = height;
         }
-        public void SetWeight(Person pers, int weight)
+        public void SetWeight(Person pers, double weight)
         {
             pers.Weight = weight;
         }
@@ -39,7 +41,7 @@ namespace Encapsulation_Inheritance_Polymorphism
             Console.WriteLine($"Age: {pers.Age}, Name: {pers.FName} {pers.LName}\nMeasurements: W: {pers.Weight}, H: {pers.Height}");
         }
 
-        public Person CreatePerson(int age, string fname, string lname, int height, int weight)
+        public Person CreatePerson(int age, string fname, string lname, double height, double weight)
         {
             Person person = new Person()
             {
