@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Encapsulation_Inheritance_Polymorphism
+namespace Encapsulation_Inheritance_Polymorphism.ErrorClasses
 {
     public abstract class UserError
     {

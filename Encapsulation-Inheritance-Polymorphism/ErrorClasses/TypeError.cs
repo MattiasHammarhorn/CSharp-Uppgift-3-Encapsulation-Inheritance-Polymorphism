@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Encapsulation_Inheritance_Polymorphism
+namespace Encapsulation_Inheritance_Polymorphism.ErrorClasses
 {
-    internal class NumericInputError : UserError
+    public class TypeError : UserError
     {
         public override string UEMessage()
         {
-            return "You tried to use a numeric input in a text only field. This fired an error!";
+            return "You tried to use an invalid type. This fired an error!";
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Encapsulation_Inheritance_Polymorphism
 {
-    internal class Person
+    public class Person
     {
         private int age;
         private string fName;
