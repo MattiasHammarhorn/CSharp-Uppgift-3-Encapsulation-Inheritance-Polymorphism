@@ -34,9 +34,9 @@ namespace Encapsulation_Inheritance_Polymorphism
             pers.Weight = weight;
         }
 
-        public static void DisplayPersonalInformation(Person pers)
+        public void DisplayPersonalInformation(Person pers)
         {
-            Console.WriteLine($"Age: {pers.Age}, Full name: {pers.FName} {pers.LName}\nMeasurements: H: {pers.Height}, W: {pers.Weight}");
+            Console.WriteLine($"Age: {pers.Age}, Name: {pers.FName} {pers.LName}\nMeasurements: W: {pers.Weight}, H: {pers.Height}");
         }
 
         public Person CreatePerson(int age, string fname, string lname, int height, int weight)

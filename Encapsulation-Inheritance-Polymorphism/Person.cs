@@ -19,20 +19,13 @@ namespace Encapsulation_Inheritance_Polymorphism
             get { return age; }
             set
             {
-                try
+                if (value <= 0)
                 {
-                    if (value <= 0)
-                    {
-                        throw new ArgumentException("Age must contain a number higher than 0.");
-                    }
-                    else
-                    {
-                        age = value;
-                    }
+                    throw new ArgumentException($"Age must contain a number higher than 0.\nValue is {value}");
                 }
-                catch (ArgumentException ex)
+                else
                 {
-                    Console.WriteLine(ex.Message);
+                    age = value;
                 }
             }
         }
@@ -41,21 +34,13 @@ namespace Encapsulation_Inheritance_Polymorphism
             get { return fName; }
             set
             {
-                try
+                if (value.Length < 2 || value.Length > 10)
                 {
-                    if (value.Length < 2 || value.Length > 10)
-                    {
-                        throw new ArgumentException("FName must contain at least 2 characters and can't be longer than 10 characters.");
-                    }
-                    else
-                    {
-                        fName = value;
-                    }
-
+                    throw new ArgumentException($"FName must contain at least 2 characters and can't be longer than 10 characters.\nValue is {value}");
                 }
-                catch (ArgumentException ex)
+                else
                 {
-                    Console.WriteLine(ex.Message);
+                    fName = value;
                 }
             }
         }
@@ -64,28 +49,45 @@ namespace Encapsulation_Inheritance_Polymorphism
             get { return lName; }
             set
             {
-                try
+                if (value.Length < 3 || value.Length > 15)
                 {
-                    if (value.Length < 3 || value.Length > 15)
-                    {
-                        throw new ArgumentException("LName must contain at least 3 characters and can't be longer than 15 characters.");
-                    }
+                    throw new ArgumentException($"LName must contain at least 3 characters and can't be longer than 15 characters.\nValue is {value}");
                 }
-                catch (Exception ex)
+                else
                 {
-                    Console.WriteLine(ex.Message);
+                    lName = value;
                 }
             }
         }
         public int Height
         {
-            get { return height; }
-            set { height = value; }
+            get{ return height; }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentException($"Height must contain a number higher than 0.\nValue is {value}");
+                }
+                else
+                {
+                    height = value;
+                }
+            }
         }
         public int Weight
         {
             get { return weight; }
-            set { weight = value; }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentException($"Weight must contain a number higher than 0.\nValue is {value}");
+                }
+                else
+                {
+                    weight = value;
+                }
+            }
         }
     }
 }
