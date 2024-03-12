@@ -24,7 +24,7 @@
 
         public string Fetch()
         {
-            return "\t\tAaaand.. FETCH!";
+            return $"{this.GetType().Name}'s special ability: Aaaand.. FETCH!";
         }
     }
 }
