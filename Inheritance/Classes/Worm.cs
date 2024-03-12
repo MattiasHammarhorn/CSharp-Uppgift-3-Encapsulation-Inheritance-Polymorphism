@@ -3,7 +3,7 @@
     public class Worm : Animal
     {
         public int Grenades { get; set; }
-        public Worm(string name, int weight, int age, int grenades) : base(name, weight, age)
+        public Worm(string name, double weight, int age, int grenades) : base(name, weight, age)
         {
             Name = name;
             Weight = weight;
@@ -13,7 +13,7 @@
 
         public override void DoSound()
         {
-            Console.WriteLine("*Wriggle noise*");
+            Console.WriteLine($"{this.GetType().Name} makes this sound: *Wriggling noises*");
         }
 
         public override string Stats()

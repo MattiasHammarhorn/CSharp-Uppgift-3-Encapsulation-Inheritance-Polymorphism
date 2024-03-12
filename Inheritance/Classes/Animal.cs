@@ -4,12 +4,12 @@
     {
         //F: Om alla djur behöver det nya attributet, vart skulle man lägga det då?
         //S: Man skulle lägga det i Animal-klassen eftersom det är basklassen av alla
-        // som ärver från den
+        // underklasser som ärver från den
         public string Name { get; set; }
-        public int Weight { get; set; }
+        public double Weight { get; set; }
         public int Age { get; set; }
 
-        protected Animal(string name, int weight, int age)
+        protected Animal(string name, double weight, int age)
         {
             Name = name;
             Weight = weight;

@@ -2,18 +2,18 @@
 {
     internal class Wolfman : Wolf, IPerson
     {
-        public Wolfman(string name, int age, int weight, int howlingDistance) : base(name, age, weight, howlingDistance)
+        public Wolfman(string name, double weight, int age, int howlingDistance) : base(name, weight, age, howlingDistance)
         {
         }
 
         public override void DoSound()
         {
-            Console.WriteLine("BACK TO THE MEANING...");
+            Console.WriteLine($"{this.GetType().Name} makes this sound: BACK TO THE MEANING...");
         }
 
         public void Talk()
         {
-            Console.WriteLine("...OF WOLF AND MAN!");
+            Console.WriteLine($"{this.GetType().Name} says: OF WOLF AND MAN!");
         }
     }
 }

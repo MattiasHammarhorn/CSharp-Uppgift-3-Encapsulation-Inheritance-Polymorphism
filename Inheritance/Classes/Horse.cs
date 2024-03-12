@@ -4,7 +4,7 @@
     {
         public bool CanSleepWhileStanding { get; set; }
 
-        public Horse(string name, int weight, int age, bool canSleepWhileStanding) : base(name, weight, age)
+        public Horse(string name, double weight, int age, bool canSleepWhileStanding) : base(name, weight, age)
         {
             Name = name;
             Weight = weight;
@@ -14,10 +14,10 @@
 
         public override void DoSound()
         {
-            Console.WriteLine("NEIGH!");
+            Console.WriteLine($"{this.GetType().Name} makes this sound: NEIGH!");
         }
 
-        public virtual string Stats()
+        public override string Stats()
         {
             return base.Stats() + $"\t\tCan sleep while standing: {CanSleepWhileStanding}";
         }

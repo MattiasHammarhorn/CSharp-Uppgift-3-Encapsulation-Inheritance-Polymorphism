@@ -2,29 +2,29 @@
 {
     public class Dog : Animal
     {
-        public bool CanSleepWhileStanding { get; set; }
+        public bool CanSenseIncomingStorms { get; set; }
 
-        public Dog(string name, int weight, int age, bool canSleepWhileStanding) : base(name, weight, age)
+        public Dog(string name, double weight, int age, bool canSenseIncomingStorms) : base(name, weight, age)
         {
             Name = name;
             Weight = weight;
             Age = age;
-            CanSleepWhileStanding = canSleepWhileStanding;
+            CanSenseIncomingStorms = canSenseIncomingStorms;
         }
 
         public override void DoSound()
         {
-            Console.WriteLine("Woof woof!");
+            Console.WriteLine($"{this.GetType().Name} makes this sound: Woof woof!");
         }
 
         public override string Stats()
         {
-            return base.Stats() + ($"\t\tCan Sleep While Standing: {CanSleepWhileStanding}");
+            return base.Stats() + ($"\t\tCan sense incoming storms: {CanSenseIncomingStorms}");
         }
 
         public string Fetch()
         {
-            return "Aaaand.. FETCH!";
+            return "\t\tAaaand.. FETCH!";
         }
     }
 }

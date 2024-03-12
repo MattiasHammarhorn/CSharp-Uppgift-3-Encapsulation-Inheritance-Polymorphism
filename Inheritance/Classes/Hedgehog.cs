@@ -4,7 +4,7 @@
     {
         public int SpeedInMPH { get; set; }
 
-        public Hedgehog(string name, int weight, int age, int speedInMPH) : base(name, weight, age)
+        public Hedgehog(string name, double weight, int age, int speedInMPH) : base(name, weight, age)
         {
             Name = name;
             Weight = weight;
@@ -14,7 +14,7 @@
 
         public override void DoSound()
         {
-            Console.WriteLine("GOTTA GO FAST!");
+            Console.WriteLine($"{this.GetType().Name} makes this sound: GOTTA GO FAST!");
         }
 
         public override string Stats()
