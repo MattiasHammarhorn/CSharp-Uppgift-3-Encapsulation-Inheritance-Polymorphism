@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Encapsulation_Inheritance_Polymorphism.ErrorClasses;
 
 namespace Encapsulation_Inheritance_Polymorphism
 {
@@ -58,23 +57,6 @@ namespace Encapsulation_Inheritance_Polymorphism
                 personHandler.SetHeight(person, 160 + y);
                 personHandler.SetWeight(person, 70 + y);
                 personHandler.DisplayPersonalInformation(person);
-            }
-            #endregion
-
-            #region 3.2) Polymorphism
-
-            List<UserError> userErrors = new List<UserError>();
-            UserError ue1 = new NumericInputError();
-            UserError ue2 = new TextInputError();
-            UserError ue3 = new TypeError();
-            userErrors.Add(ue1);
-            userErrors.Add(ue2);
-            userErrors.Add(ue3);
-
-            Console.WriteLine("\nWriting user errors:\n");
-            foreach (var ue in userErrors)
-            {
-                Console.WriteLine(ue.UEMessage());
             }
             #endregion
 
